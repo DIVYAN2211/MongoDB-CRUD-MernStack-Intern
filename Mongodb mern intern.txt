@@ -1,0 +1,11 @@
+show dbs
+use stu
+db.createCollection("Profile")
+db.Profile.insertOne({name:'Divya',roll:12})
+db.Profile.find()
+db.Profile.insertOne({name:'Uma',roll:11,age:40,details:{salary:10000000,role:'HR'}})
+db.MongoDB.find().toArray()
+ db.MongoDB.find().forEach(d => printjson(d))   find function return cursor object-using this we call toArray ,foreach
+db.MongoDB.find().forEach(d => print(d));
+db.MongoDB.find({name:'Seema Thapar'})
+ db.Profile.find({'details.role':'HR'}) 
